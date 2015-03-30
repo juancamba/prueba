@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+
+
+<struts-config>
+    
+    <action-mappings>
+       
+        <action path="/fromhome" forward="/page1.jsp"/>
+        
+<!--        <action path="/frompage1" forward="/page2.jsp"/>-->
+        <action path="/frompage1" type="com.webhomecover.action.Page1Action">
+            <forward name="success" path="/page2.jsp" />
+        </action>
+        <action path="/frompage2" forward="/page1.jsp"/>
+        
+        
+    </action-mappings>
+    
+
+  
+</struts-config>
