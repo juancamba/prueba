@@ -3,29 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package beans;
-
-import javax.servlet.http.HttpServletRequest;
-import org.apache.struts.action.ActionErrors;
-import org.apache.struts.action.ActionForm;
-import org.apache.struts.action.ActionMapping;
-import java.io.Serializable;
-import org.apache.struts.action.ActionMessage;
-
+package dto;
 
 /**
  *
  * @author juan
  */
-public class CdBean extends ActionForm implements Serializable{
+public class CdDTO {
     private String titel;
     private String interpret;
     private String jahr;
     private int id;
-    
-    public CdBean(){}
-    
-    public CdBean(String titel, String interpret, String jahr, int id) {
+
+    public CdDTO(String titel, String interpret, String jahr, int id) {
         this.titel = titel;
         this.interpret = interpret;
         this.jahr = jahr;
@@ -64,13 +54,5 @@ public class CdBean extends ActionForm implements Serializable{
         this.id = id;
     }
     
-    public ActionErrors validate(ActionMapping mapping, HttpServletRequest request) {
-        ActionErrors actionErrors = new ActionErrors();
-        
-        if(interpret.equals("")){
-            actionErrors.add("interpret", new ActionMessage("error.interpret"));
-        }
-        return actionErrors;
-    }
     
 }

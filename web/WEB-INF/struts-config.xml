@@ -12,7 +12,11 @@
         <action path="/fromhome" forward="/page1.jsp"/>
         
 <!--        <action path="/frompage1" forward="/page2.jsp"/>-->
-        <action path="/frompage1" type="com.webhomecover.action.Page1Action">
+        <action path="/frompage1" 
+                type="com.webhomecover.action.Page1Action"
+              
+                input="page2.jsp"
+        >
             <forward name="success" path="/page2.jsp" />
         </action>
         <action path="/frompage2" forward="/page1.jsp"/>

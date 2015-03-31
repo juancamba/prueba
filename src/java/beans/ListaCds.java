@@ -7,6 +7,7 @@ package beans;
 
 import java.util.Collection;
 import dao.*;
+import dto.*;
 /**
  *
  * @author juan
@@ -14,7 +15,8 @@ import dao.*;
 public class ListaCds {
 
     private String whereClause = new String();
-
+    private Collection<CdDTO> listaCds;
+    
     public String getWhereClause() {
         return whereClause;
     }
@@ -23,17 +25,15 @@ public class ListaCds {
         this.whereClause = whereClause;
     }
 
-    public Collection<CdBean> getCds() {
-        /*Collection<MaterialUsadoDTO> materialesUsados = ModelFacade.getMaterialesUsados(whereClause);
-         return materialesUsados;*/
-
-        // if no 'where' clause string is passed in, create an empty string
+    public Collection<CdDTO> getListaCds() {
+     
         if (whereClause == null) {
             whereClause = new String();
         }
         CdDAO cdDAO = new CdDAO();
-        Collection<CdBean> listaCds = cdDAO.getCds();
+        listaCds = cdDAO.getCds();
         //Collection<FuncionDTO> listaFunciones = funcionDAO.listaFunciones(whereClause);
+       
         return listaCds;
     }
 }

@@ -1,18 +1,39 @@
-<%-- 
-    Document   : home.jsp
-    Created on : 22-mar-2015, 16:16:47
-    Author     : juan
---%>
+<?xml version="1.0"?>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"	
+   xmlns:c="http://java.sun.com/jsp/jstl/core" 		
+   version="2.0">
+<jsp:directive.page isELIgnored="false" />
+<jsp:directive.page contentType="text/html"/>   
+<jsp:output omit-xml-declaration="false"
+ doctype-root-element="html"
+ doctype-public="-//W3C//DTD XHTML 1.1//EN" 
+ doctype-system="http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd" />
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+       
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World! you are in page 1</h1>
-        <a href="frompage1.do">Click to go to the next page</a>
+        <h1> you are in page 1</h1>
+        <p>Listado de cds</p>
+       
+     
+        <table border="1">
+        
+        <jsp:useBean id="listaCds" class="beans.ListaCds" />    
+        <c:forEach var="cd" items="${listaCds.listaCds}">
+        
+         <tr>
+          
+          
+          <td><c:out value="${id}"/></td>
+          <td><c:out value="${cd.titel}"/></td>
+          <td><c:out value="${cd.interpret}"/></td>
+         </tr>
+         
+        </c:forEach>
+         </table>
     </body>
 </html>
+</jsp:root>
