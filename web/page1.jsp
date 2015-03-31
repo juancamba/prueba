@@ -1,39 +1,18 @@
-<?xml version="1.0"?>
-
-<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"	
-   xmlns:c="http://java.sun.com/jsp/jstl/core" 		
-   version="2.0">
-<jsp:directive.page isELIgnored="false" />
-<jsp:directive.page contentType="text/html"/>   
-<jsp:output omit-xml-declaration="false"
- doctype-root-element="html"
- doctype-public="-//W3C//DTD XHTML 1.1//EN" 
- doctype-system="http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd" />
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-    <head>
-       
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1> you are in page 1</h1>
-        <p>Listado de cds</p>
-       
-     
-        <table border="1">
-        
-        <jsp:useBean id="listaCds" class="beans.ListaCds" />    
-        <c:forEach var="cd" items="${listaCds.listaCds}">
-        
-         <tr>
-          
-          
-          <td><c:out value="${id}"/></td>
-          <td><c:out value="${cd.titel}"/></td>
-          <td><c:out value="${cd.interpret}"/></td>
-         </tr>
-         
-        </c:forEach>
-         </table>
-    </body>
+<%@taglib uri="http://struts.apache.org/tags-html" prefix="html"%>
+<%@taglib uri="http://struts.apache.org/tags-bean" prefix="bean"%>
+<%@taglib uri="http://struts.apache.org/tags-logic" prefix="logic"%>
+<html>
+<head>
+</head>
+<body>
+<h1>Struts  example</h1>
+ 
+<logic:iterate name="listaUsuarios" id="listUserId">
+<p>
+	List Users <bean:write name="listUserId" property="nombre"/> , 
+	
+</p>
+</logic:iterate>
+ 
+</body>
 </html>
-</jsp:root>

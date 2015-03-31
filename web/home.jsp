@@ -17,6 +17,6 @@
             redirigir a page 1 con su atributo forward
             action path="fromhome" forward="/page1.jsp"/>
         </p>
-        <a href="fromhome.do">Click to go to the next page</a>
+        <a href="page1.do">Click to go to the next page</a>
     </body>
 </html>

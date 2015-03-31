@@ -2,7 +2,9 @@
 package com.webhomecover.action;
 import dao.*;
 import beans.*;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 import org.apache.struts.action.*;
 import javax.servlet.http.*;
 import org.apache.commons.logging.Log;
@@ -30,6 +32,10 @@ public class Page1Action extends Action {
         request.setAttribute("listacds", listacds);
         for(CdBean cd: listacds)
             System.out.println(cd.getInterpret());*/
+        List<UsuarioBean> listUsers = new ArrayList<UsuarioBean>();
+        listUsers.add(new UsuarioBean("juan","camba"));
+        listUsers.add(new UsuarioBean("particia","camba"));
+        request.setAttribute("listaUsuarios",listUsers);
         return mapping.findForward("success");
     }
 }
