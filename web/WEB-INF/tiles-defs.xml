@@ -10,7 +10,21 @@
 -->
 
 <tiles-definitions>
-
+     <definition name="layout" path="/layout.jsp">
+        
+        <put name="body"   value="/home.jsp" />
+        
+    </definition>
+    <!--
+    <definition name="page1" extends="baseLayout">
+    
+        <put name="body" value="/page1.jsp" />
+    </definition>
+    <definition name="page2" extends="baseLayout">
+    
+        <put name="body" value="/page2.jsp" />
+    </definition>
+    -->
     <!-- sample tiles definitions
     <definition name=".mainLayout" path="/common/layouts/classicLayout.jsp">
         <put name="title"  value="Sample Page Title" />
@@ -36,7 +50,6 @@
 
     end samples -->
 
-    <definition name="${YOUR_DEFINITION_HERE}">
-    </definition>
+   
 
 </tiles-definitions>
