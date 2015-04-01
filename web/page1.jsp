@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>Struts  example</h1>
- 
+<a href="page2.do">Click to go to the  page 2</a> 
 <logic:iterate name="listaUsuarios" id="listUserId">
 <p>
 	List Users <bean:write name="listUserId" property="nombre"/> , 

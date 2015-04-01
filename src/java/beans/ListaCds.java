@@ -7,7 +7,7 @@ package beans;
 
 import java.util.Collection;
 import dao.*;
-import dto.*;
+
 /**
  *
  * @author juan
@@ -15,7 +15,7 @@ import dto.*;
 public class ListaCds {
 
     private String whereClause = new String();
-    private Collection<CdDTO> listaCds;
+    private Collection<CdBean> listaCds;
     
     public String getWhereClause() {
         return whereClause;
@@ -25,7 +25,7 @@ public class ListaCds {
         this.whereClause = whereClause;
     }
 
-    public Collection<CdDTO> getListaCds() {
+    public Collection<CdBean> getListaCds() {
      
         if (whereClause == null) {
             whereClause = new String();

@@ -1,11 +1,10 @@
-
 package dao;
 import java.sql.*;
 import java.util.*;
 import javax.naming.*;
 import javax.sql.*;
 import beans.*;
-import dto.*;
+
 public class CdDAO {
     
     
@@ -33,9 +32,9 @@ public class CdDAO {
         this.whereClause = whereClause;
     }
     
-    public Collection<CdDTO> getCds() {
+    public Collection<CdBean> getCds() {
         
-        Collection<CdDTO> cds = new ArrayList<CdDTO>();
+        Collection<CdBean> cds = new ArrayList<CdBean>();
         try {
             getConnection();
             Statement statement = connection.createStatement();
@@ -45,7 +44,7 @@ public class CdDAO {
             String jahr = null;
             int id = 0;
            
-            CdDTO cdDTO = null;
+            CdBean cdBean = null;
             while (results.next()) {
                 
                 titel = results.getString("titel");
@@ -53,9 +52,9 @@ public class CdDAO {
              
                 jahr = results.getString("jahr");
                 id = results.getInt("id");
-                cdDTO = new CdDTO(titel, interpret, jahr, id);
+                cdBean = new CdBean(titel, interpret, jahr, id);
                 //System.out.println(titel);
-                cds.add(cdDTO);
+                cds.add(cdBean);
             }
             results.close();
             results = null;
