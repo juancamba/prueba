@@ -30,7 +30,7 @@
                 <div class="col-lg-3">
                     <ul>
                         <li><a href="page1.do"> page 1</a> </li>
-                        <li><a href="page2.do"> page 2</a> </li>
+                        <li><a href="page.do?method=page2"> page 2</a> </li>
                     </ul>
                 </div>
                 <div class="col-lg-9">
