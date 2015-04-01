@@ -10,7 +10,7 @@
     <action-mappings>
        
         
-        
+         <action path="/home" forward="/home.jsp"/>
 <!--        <action path="/frompage1" forward="/page2.jsp"/>-->
         <action path="/page1" 
                 type="com.webhomecover.action.Page1Action"

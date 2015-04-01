@@ -5,6 +5,12 @@
  */
 package com.webhomecover.action;
 
+import beans.CdBean;
+import beans.ListaCds;
+import beans.UsuarioBean;
+import dao.CdDAO;
+import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.struts.action.ActionForm;
@@ -21,7 +27,15 @@ public class PageAction extends DispatchAction{
     public ActionForward page2(ActionMapping mapping, 
             ActionForm form, HttpServletRequest request, HttpServletResponse response)throws Exception
             {
-                System.out.println("PageAction");
+                CdDAO cds = new CdDAO();
+                ListaCds listaCds = new ListaCds();
+                List<CdBean> listacds = (List<CdBean>) cds.getCds();
+                request.setAttribute("listacds", listacds);
+
+                List<UsuarioBean> listUsers = new ArrayList<UsuarioBean>();
+                listUsers.add(new UsuarioBean("juan","camba"));
+                listUsers.add(new UsuarioBean("particia","camba"));
+                request.setAttribute("listaUsuarios",listUsers);
                 return mapping.findForward("page2");
             }        
 }

@@ -23,12 +23,16 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Proyecto Struts Testing</h2>
+                    
+                    <div class="page-header ">
+                        <h1> Struts Project Testing <small>by Juancho</small></h1>
+                      </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-3">
                     <ul>
+                        <li><a href="home.do"> Home</a> </li>
                         <li><a href="page1.do"> page 1</a> </li>
                         <li><a href="page.do?method=page2"> page 2</a> </li>
                     </ul>
