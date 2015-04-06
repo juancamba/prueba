@@ -37,5 +37,12 @@ public class PageAction extends DispatchAction{
                 listUsers.add(new UsuarioBean("particia","camba"));
                 request.setAttribute("listaUsuarios",listUsers);
                 return mapping.findForward("page2");
-            }        
+            }
+    
+     public ActionForward page3(ActionMapping mapping, 
+            ActionForm form, HttpServletRequest request, HttpServletResponse response)throws Exception
+            {
+               
+                return mapping.findForward("page3");
+            }      
 }

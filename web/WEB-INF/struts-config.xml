@@ -26,10 +26,14 @@
                >
             <forward name="success" path="/page2.jsp" />
         </action>
-        <action path="/page" parameter="method" type="com.webhomecover.action.PageAction">
+        <action path="/page2" parameter="method" type="com.webhomecover.action.PageAction">
             <forward name="page2" path="page2"/>
             
-        </action>    
+        </action>
+         <action path="/page3" parameter="method" type="com.webhomecover.action.PageAction">
+            <forward name="page3" path="page3"/>
+            
+        </action>      
     </action-mappings>
     <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
     <plug-in className="org.apache.struts.tiles.TilesPlugin">

@@ -4,7 +4,7 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="well">
-            <h2>Page 2</h2>
+            <h2>Page 3</h2>
                 <p >Si se usa el <b>PageAction extends DispatchAction</b> actúa como un contralador 
                 en php, es decir el controlador es una clase y sus métodos son los action.
                 <br>Por eso para pasar parámetros deberá hacerse desde este action.
@@ -17,23 +17,7 @@
             </p>
         </div>
         
-        <h2>Datos pasados desde el PageAction, el controller</h2>
-        <logic:iterate name="listaUsuarios" id="listUserId">
-        <p>
-                List Users <bean:write name="listUserId" property="nombre"/> , 
-
-        </p>
-        </logic:iterate>
-
-        <h2>From database</h2>
-        <ul>
-            <logic:iterate name="listacds" id="listcd">
-                <li>
-                    Interprete: <bean:write name="listcd" property="interpret"/>
-                </li>
-
-            </logic:iterate> 
-        </ul>
+        
     </div>
 </div>
 

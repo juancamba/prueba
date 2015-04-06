@@ -25,6 +25,7 @@ public class CdDAO {
                 e.printStackTrace();
             } catch (SQLException e) {
                 e.printStackTrace();
+                //System.out.println("Error en SQL");
             }
         }
     }
@@ -69,6 +70,7 @@ public class CdDAO {
         }
         return cds;
     }
+    
      private void cleanUp() {
         // always make sure result sets, statements and connections are closed,
         if (results != null) {

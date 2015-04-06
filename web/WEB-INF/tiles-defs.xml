@@ -19,6 +19,10 @@
     
         <put name="body" value="/page2.jsp" />
     </definition>
+     <definition name="page3" extends="layout">
+    
+        <put name="body" value="/page3.jsp" />
+    </definition>
     <!--
     <definition name="page1" extends="baseLayout">
     
