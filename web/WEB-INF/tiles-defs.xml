@@ -23,6 +23,10 @@
     
         <put name="body" value="/page3.jsp" />
     </definition>
+     <definition name="form" extends="layout">
+    
+        <put name="body" value="/form.jsp" />
+    </definition>
     <!--
     <definition name="page1" extends="baseLayout">
     

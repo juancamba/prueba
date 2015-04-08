@@ -42,7 +42,18 @@ public class PageAction extends DispatchAction{
      public ActionForward page3(ActionMapping mapping, 
             ActionForm form, HttpServletRequest request, HttpServletResponse response)throws Exception
             {
-               
+                
                 return mapping.findForward("page3");
-            }      
+            }
+     public ActionForward form(ActionMapping mapping, 
+            ActionForm form, HttpServletRequest request, HttpServletResponse response)throws Exception
+            {
+                CdDAO cd = new CdDAO();
+                String id = request.getParameter("id");
+                cd.setWhereClause(" where id = "+id);
+                ListaCds listaCds = new ListaCds();
+                List<CdBean> listacds = (List<CdBean>) cd.getCds();
+                request.setAttribute("CdBean",listacds.get(0));
+                return mapping.findForward("form");
+            }
 }

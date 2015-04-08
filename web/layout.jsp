@@ -36,6 +36,7 @@
                         <li><a href="page1.do"> page 1</a> </li>
                         <li><a href="page2.do?method=page2"> page 2</a> </li>
                         <li><a href="page3.do?method=page3"> page 3</a> </li>
+                        <li><a href="form.do?method=form"> Formulario</a> </li>
                     </ul>
                 </div>
                 <div class="col-lg-9">

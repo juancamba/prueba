@@ -1,6 +1,7 @@
 <%@taglib uri="http://struts.apache.org/tags-html" prefix="html"%>
 <%@taglib uri="http://struts.apache.org/tags-bean" prefix="bean"%>
 <%@taglib uri="http://struts.apache.org/tags-logic" prefix="logic"%>
+
 <div class="row">
     <div class="col-lg-12">
         <div class="well">
@@ -20,8 +21,8 @@
         <h2>Datos pasados desde el PageAction, el controller</h2>
         <logic:iterate name="listaUsuarios" id="listUserId">
         <p>
-                List Users <bean:write name="listUserId" property="nombre"/> , 
-
+                <bean:write name="listUserId" property="nombre"/>  
+                
         </p>
         </logic:iterate>
 
@@ -29,7 +30,9 @@
         <ul>
             <logic:iterate name="listacds" id="listcd">
                 <li>
+                    <html:link action="/form?method=form" paramName="listcd" paramProperty="id" paramId="id">
                     Interprete: <bean:write name="listcd" property="interpret"/>
+                     </html:link>
                 </li>
 
             </logic:iterate> 
