@@ -6,7 +6,9 @@
 package com.webhomecover.action;
 
 import beans.CdBean;
+import beans.ListaCds;
 import dao.CdDAO;
+import java.util.List;
 import org.apache.struts.action.*;
 import javax.servlet.http.*;
 
@@ -37,12 +39,13 @@ public class FichaCdAction extends org.apache.struts.action.Action {
     }
     
     private ActionForward doLoad(ActionMapping mapping,  HttpServletRequest request ){
-        String id = request.getParameter("id");
-       // CdBean cdBean = (CdBean) form;
-        CdDAO cdDao = new CdDAO();
-        //cdDao.setWhereClause("where id = "+id);
-        CdBean cdBean = cdDao.getCd(id);
-        request.setAttribute("cdBean",cdBean);
+        
+       CdDAO cd = new CdDAO();
+                String id = request.getParameter("id");
+                cd.setWhereClause(" where id = "+id);
+                ListaCds listaCds = new ListaCds();
+                List<CdBean> listacds = (List<CdBean>) cd.getCds();
+                request.setAttribute("cdBean",listacds.get(0));
         return mapping.findForward("success");
     }
     
