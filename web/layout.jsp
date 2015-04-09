@@ -10,13 +10,14 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="/PracticaPruebastweb/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/Struts1/bootstrap/css/bootstrap.min.css">
 
         <!-- Optional theme -->
-        <link rel="stylesheet" href="/PracticaPruebastweb/bootstrap/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="/Struts1/bootstrap/css/bootstrap-theme.min.css">
 
         <!-- Latest compiled and minified JavaScript -->
-        <script src="/PracticaPruebastweb/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/Struts1/bootstrap/js/jquery.min.js"></script>
+        <script src="/Struts1/bootstrap/js/bootstrap.min.js"></script>
         <title>JSP Page</title>
     </head>
     <body>
@@ -34,7 +35,7 @@
                     <ul>
                         <li><a href="home.do"> Home</a> </li>
                         <li><a href="page1.do"> page 1</a> </li>
-                        <li><a href="page2.do?method=page2"> page 2</a> </li>
+                        <li><a href="lista.do">lista</a> </li>
                         <li><a href="page3.do?method=page3"> page 3</a> </li>
                         <li><a href="form.do?method=form"> Formulario</a> </li>
                     </ul>

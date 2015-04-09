@@ -56,4 +56,9 @@ public class PageAction extends DispatchAction{
                 request.setAttribute("CdBean",listacds.get(0));
                 return mapping.findForward("form");
             }
+     public ActionForward processform(ActionMapping mapping, 
+            ActionForm form, HttpServletRequest request, HttpServletResponse response)throws Exception
+     {
+         return mapping.findForward("success");
+     } 
 }

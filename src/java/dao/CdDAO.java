@@ -70,7 +70,30 @@ public class CdDAO {
         }
         return cds;
     }
-    
+    public CdBean getCd(String id){
+        CdBean cdBean = null;
+        try {
+            getConnection();
+            Statement statement = connection.createStatement();
+            ResultSet results = statement.executeQuery("SELECT * FROM cds where id = '"+id+"'" );
+            String titel = null;
+            String interpret = null;
+            String jahr = null;
+            
+            titel = results.getString("titel");
+            interpret = results.getString("interpret");
+             
+            jahr = results.getString("jahr");
+                
+            cdBean = new CdBean(titel, interpret, jahr, Integer.parseInt(id));
+            
+             } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            cleanUp();
+        }
+        return cdBean;
+    }
      private void cleanUp() {
         // always make sure result sets, statements and connections are closed,
         if (results != null) {

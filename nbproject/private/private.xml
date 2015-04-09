@@ -3,14 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/juan/Documents/NetBeansProjects/Struts1/web/form-body.jsp</file>
             <file>file:/C:/Users/juan/Documents/NetBeansProjects/Struts1/web/home.jsp</file>
-            <file>file:/C:/Users/juan/Documents/NetBeansProjects/Struts1/web/WEB-INF/tiles-defs.xml</file>
-            <file>file:/C:/Users/juan/Documents/NetBeansProjects/Struts1/src/java/com/webhomecover/action/PageAction.java</file>
-            <file>file:/C:/Users/juan/Documents/NetBeansProjects/Struts1/web/WEB-INF/struts-config.xml</file>
-            <file>file:/C:/Users/juan/Documents/NetBeansProjects/Struts1/src/java/com/webhomecover/action/Page2Action.java</file>
-            <file>file:/C:/Users/juan/Documents/NetBeansProjects/Struts1/web/layout.jsp</file>
-            <file>file:/C:/Users/juan/Documents/NetBeansProjects/Struts1/web/page2.jsp</file>
-            <file>file:/C:/Users/juan/Documents/NetBeansProjects/Struts1/web/page1.jsp</file>
+            <file>file:/C:/Users/juan/Documents/NetBeansProjects/Struts1/web/form.jsp</file>
         </group>
     </open-files>
 </project-private>

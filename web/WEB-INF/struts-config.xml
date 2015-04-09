@@ -19,12 +19,12 @@
         >
             <forward name="success" path="/page1.jsp" />
         </action>
-        <action path="/page2" 
-                type="com.webhomecover.action.Page2Action"
+        <action path="/lista" 
+                type="com.webhomecover.action.ListaAction"
                 scope="request"
-                put="page2.jsp"
+                put="lista.jsp"
                >
-            <forward name="success" path="/page2.jsp" />
+            <forward name="success" path="/lista.jsp" />
         </action>
         <action path="/page2" parameter="method" type="com.webhomecover.action.PageAction">
             <forward name="page2" path="page2"/>
@@ -36,6 +36,21 @@
         </action>
          <action path="/form" parameter="method" type="com.webhomecover.action.PageAction">
             <forward name="form" path="form"/>
+            
+        </action>
+        <action 
+            input="/fichaCd.jsp"
+            
+            path="/verFichaCd"   
+            parameter="load"   
+            scope="request"   
+            validate="false"      
+            type="com.webhomecover.action.FichaCdAction">
+            <forward name="success" path="/fichaCd.jsp" />
+            
+        </action>    
+        <action path="/processform" parameter="method" type="com.webhomecover.action.PageAction">
+            <forward name="processform" path="processform"/>
             
         </action>         
     </action-mappings>

@@ -15,6 +15,7 @@
         <put name="body"   value="/home.jsp" />
         
     </definition>
+     <!--
     <definition name="page2" extends="layout">
     
         <put name="body" value="/page2.jsp" />
@@ -27,7 +28,7 @@
     
         <put name="body" value="/form.jsp" />
     </definition>
-    <!--
+   
     <definition name="page1" extends="baseLayout">
     
         <put name="body" value="/page1.jsp" />
